@@ -27,10 +27,10 @@ export default class DomainAdapter {
         if (parseResult && parseResult.icann) {
             const {subDomains, domain, topLevelDomains} = parseResult.icann;
 
-            if (domain && topLevelDomains) {
+            if (domain && topLevelDomains.length) {
                 parsedDomain = domain + '.' + topLevelDomains.join('.');
             }
-            if (subDomains) {
+            if (subDomains.length) {
                 parsedSubdomain = subDomains.join('.');
             }
         }

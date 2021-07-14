@@ -126,6 +126,47 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
 
     });
 
+    describe('path', () => {
+
+        it('should return / for empty string', () => {
+            let test = new DomainAdapter('');
+
+            expect(test.path).to.equal('/');
+
+        });
+
+        it('should return / for no param', () => {
+            let test = new DomainAdapter();
+
+            expect(test.path).to.equal('/');
+
+        });
+
+        it('should return / for example.com', () => {
+            let test = new DomainAdapter('example.com');
+
+            expect(test.path).to.equal('/');
+
+        });
+
+
+        it('should return /path for example.com/path', () => {
+            let test = new DomainAdapter('example.com/path');
+
+            expect(test.path).to.equal('/path');
+
+        });
+
+        it('should return /path for http://example.com/path', () => {
+            let test = new DomainAdapter('http://example.com/path');
+
+            expect(test.path).to.equal('/path');
+
+        });
+
+    });
+
+
     describe('hostname', () => {
         it('should return domain and subdomain', async () => {
             let test = new DomainAdapter('sub.example.com');
@@ -174,10 +215,24 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
 
             });
 
-            it('should return false for valid domain', async () => {
+            it('should return true for valid domain', async () => {
                 let test = DomainAdapter.valid('example.com');
 
                 expect(test).to.equal(true);
+
+            });
+
+            it('should return false for empty domain', async () => {
+                let test = DomainAdapter.valid('');
+
+                expect(test).to.equal(false);
+
+            });
+
+            it('should return false for no params', async () => {
+                let test = DomainAdapter.valid();
+
+                expect(test).to.equal(false);
 
             });
         });
