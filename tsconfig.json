@@ -3,7 +3,7 @@
         "module":  "commonjs",
         "sourceMap": true,
         "removeComments": false,
-        "outDir": "build",
+        "outDir": "dist",
         "allowJs": true,
         "target" : "es2017",
         "watch": false,

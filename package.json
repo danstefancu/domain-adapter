@@ -2,7 +2,7 @@
   "name": "domain-adapter",
   "version": "0.0.0",
   "description": "Adapt to usable domain, subdomain and hostname an URL or a domain. Can also be used to validate",
-  "main": "build/domain-adapter.js",
+  "main": "dist/domain-adapter.js",
   "scripts": {
     "build": "tsc",
     "test": "mocha",

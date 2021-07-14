@@ -1,0 +1,10 @@
+test
+src
+tsconfig.json
+.gitattributes
+.nycrc
+.husky
+.versionrc.js
+.nyc_output
+.idea
+*.map
