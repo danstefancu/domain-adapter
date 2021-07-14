@@ -10,5 +10,4 @@ module.exports = {
             type: 'json'
         }],
     tagPrefix: '',
-    issueUrlFormat: 'https://jira.rankingcoach.com/browse/{{id}}'
 }

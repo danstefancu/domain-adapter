@@ -5,6 +5,7 @@
     "exclude": [
         "src/www.ts",
         "test/*",
+        "dist/*",
         "src/types",
         ".versionrc.js"
     ]

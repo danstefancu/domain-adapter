@@ -55,7 +55,7 @@
   },
   "standard-version": {
     "skip": {
-      "tag": true
+      "tag": false
     }
   }
 }
