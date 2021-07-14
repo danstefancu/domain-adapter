@@ -1,0 +1,21 @@
+{
+    "compilerOptions": {
+        "module":  "commonjs",
+        "sourceMap": true,
+        "removeComments": false,
+        "outDir": "build",
+        "allowJs": true,
+        "target" : "es2017",
+        "watch": false,
+        "skipLibCheck": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ],
+    "exclude": [
+        "coverage",
+        "node_modules",
+        "!node_modules/@types",
+        "**/*.spec.ts"
+    ]
+}
