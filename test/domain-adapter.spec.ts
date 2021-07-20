@@ -166,6 +166,70 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
 
     });
 
+    describe('commondomain', () => {
+        it('should return empty string for empty input', async () => {
+            let test = new DomainAdapter('');
+
+            expect(test.commondomain).to.equal('');
+
+        });
+
+        it('should return subdomain domain and path', async () => {
+            let test = new DomainAdapter('http://sub.domain.com/path');
+
+            expect(test.commondomain).to.equal('sub.domain.com/path');
+
+        });
+
+        it('should return domain', async () => {
+            let test = new DomainAdapter('http://domain.com');
+
+            expect(test.commondomain).to.equal('domain.com');
+
+        });
+
+        it('should return subdomain domain', async () => {
+            let test = new DomainAdapter('http://sub.domain.com');
+
+            expect(test.commondomain).to.equal('sub.domain.com');
+
+        });
+
+        it('should return domain and path', async () => {
+            let test = new DomainAdapter('http://domain.com/path');
+
+            expect(test.commondomain).to.equal('domain.com/path');
+
+        });
+
+        it('should return strip last slash', async () => {
+            let test = new DomainAdapter('http://sub.domain.com/path/');
+
+            expect(test.commondomain).to.equal('sub.domain.com/path');
+
+        });
+
+        it('should return strip anything after first slash', async () => {
+            let test = new DomainAdapter('http://sub.domain.com/path/something');
+
+            expect(test.commondomain).to.equal('sub.domain.com/path');
+
+        });
+
+        it('should return strip anything after first slash and last slash', async () => {
+            let test = new DomainAdapter('http://sub.domain.com/path/something/');
+
+            expect(test.commondomain).to.equal('sub.domain.com/path');
+
+        });
+
+        it('should handle queries', async () => {
+            let test = new DomainAdapter('http://sub.domain.com/path/something/?query=value');
+
+            expect(test.commondomain).to.equal('sub.domain.com/path');
+
+        });
+    });
 
     describe('hostname', () => {
         it('should return domain and subdomain', async () => {

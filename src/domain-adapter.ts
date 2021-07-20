@@ -84,6 +84,12 @@ export default class DomainAdapter {
         return [this.subdomain, this.domain].filter(v => v).join('.');
     }
 
+    public get commondomain(): string {
+        let pathParts = this.path.split('/');
+        let common = this.hostname + '/' + pathParts[1];
+        return common.endsWith('/') ? common.slice(0, -1) : common;
+    }
+
     public get valid(): boolean {
         return !!this.hostname;
     }
