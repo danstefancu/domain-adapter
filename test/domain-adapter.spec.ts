@@ -28,9 +28,30 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
 
         });
 
+        it('should return empty string for space before domain', () => {
+            let test = new DomainAdapter(' example.com');
+
+            expect(test.domain).to.equal('');
+
+        });
+
+        it('should return empty string for space between protocol and domain', () => {
+            let test = new DomainAdapter('http:// example.com');
+
+            expect(test.domain).to.equal('');
+
+        });
+
 
         it('should return example.com for example.com', () => {
             let test = new DomainAdapter('example.com');
+
+            expect(test.domain).to.equal('example.com');
+
+        });
+
+        it('should return example.com for ftp://example.com', () => {
+            let test = new DomainAdapter('ftp://example.com');
 
             expect(test.domain).to.equal('example.com');
 

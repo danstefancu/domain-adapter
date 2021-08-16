@@ -46,16 +46,21 @@ export default class DomainAdapter {
     private assureUrl() {
         this.domainOrUrl = this.domainOrUrl.replace('http://', '');
         this.domainOrUrl = this.domainOrUrl.replace('https://', '');
+        this.domainOrUrl = this.domainOrUrl.replace('ftp://', '');
+
         this.domainOrUrl = 'https://' + this.domainOrUrl;
     }
 
     private punyCode() {
-        if (this.domainOrUrl.length > 'https://'.length) {
-            // this will transform punnycode
-            let transformed = new URL(this.domainOrUrl);
-            this.inputDomain = transformed.hostname;
+        try {
+            if (this.domainOrUrl.length > 'https://'.length) {
+                // this will transform punnycode
+                let transformed = new URL(this.domainOrUrl);
+                this.inputDomain = transformed.hostname;
+            }
+        } catch {
+            this.inputDomain = '';
         }
-
     }
 
     private generatePath() {
