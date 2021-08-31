@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.3](https://github.com/danstefancu/domain-adapter/compare/1.1.2...1.1.3) (2021-08-31)
+
+
+### Bug Fixes
+
+* www.nhs.uk and www.gob.cl reported as invalid domain ([2cf829d](https://github.com/danstefancu/domain-adapter/commit/2cf829d07b1c16a619c6a1a36fe917b4f0613a99))
+
 ### [1.1.2](https://github.com/danstefancu/domain-adapter/compare/1.1.1...1.1.2) (2021-08-31)
 
 
