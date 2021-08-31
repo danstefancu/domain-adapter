@@ -40,7 +40,7 @@ export default class DomainAdapter {
     }
 
     private stripWWW() {
-        if (this.domainOrUrl.includes('gov')) {
+        if (this.domainOrUrl.includes('gov.') || this.domainOrUrl.includes('gob.') || this.domainOrUrl.includes('nhs.')) {
             this.domainOrUrl = this.domainOrUrl.replace(/^(?:https?:\/\/)?/i, '');
         } else {
             this.domainOrUrl = this.domainOrUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '');
