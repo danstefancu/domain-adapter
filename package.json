@@ -1,6 +1,6 @@
 {
   "name": "domain-adapter",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Adapt to usable domain, subdomain and hostname an URL or a domain. Can also be used to validate",
   "main": "dist/domain-adapter.js",
   "types": "types/domain-adapter.d.ts",

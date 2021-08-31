@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.2](https://github.com/danstefancu/domain-adapter/compare/1.1.1...1.1.2) (2021-08-31)
+
+
+### Bug Fixes
+
+* www.gov.uk reported as invalid domain ([f9a5fb4](https://github.com/danstefancu/domain-adapter/commit/f9a5fb47f985b91db8c3febdadb8e063bebe6406))
+
 ### [1.1.1](https://github.com/danstefancu/domain-adapter/compare/1.1.0...1.1.1) (2021-08-16)
 
 
