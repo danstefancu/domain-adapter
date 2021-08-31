@@ -40,7 +40,11 @@ export default class DomainAdapter {
     }
 
     private stripWWW() {
-        this.domainOrUrl = this.domainOrUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '');
+        if (this.domainOrUrl.includes('gov')) {
+            this.domainOrUrl = this.domainOrUrl.replace(/^(?:https?:\/\/)?/i, '');
+        } else {
+            this.domainOrUrl = this.domainOrUrl.replace(/^(?:https?:\/\/)?(?:www\.)?/i, '');
+        }
     }
 
     private assureUrl() {

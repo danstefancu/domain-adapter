@@ -64,6 +64,12 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
 
         });
 
+        it('should not return empty for www.gov.uk', () => {
+            let test = new DomainAdapter('www.gov.uk');
+
+            expect(test.domain).to.not.equal('');
+        });
+
         it('should return xn--mnchen-3ya.de for münchen.de', () => {
             let test = new DomainAdapter('münchen.de');
 
