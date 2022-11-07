@@ -6,10 +6,18 @@ import {parseDomain, ParseResultListed} from "parse-domain";
 export default class DomainAdapter {
     private _domain: string = '';
     private _subdomain: string = '';
-    private _path: string = '';
+    private _path: string = '/';
     private inputDomain: string = '';
 
     constructor(protected domainOrUrl: string = '') {
+        if (domainOrUrl) {
+            this.parse(domainOrUrl);
+        }
+    }
+
+    public parse(domainOrUrl: string = '') {
+        this.domainOrUrl = domainOrUrl;
+
         this.stripWWW();
         this.assureUrl();
         this.punyCode();

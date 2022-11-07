@@ -341,4 +341,15 @@ describe('DomainAdapter (domain-adapter.spec.ts)', () => {
         });
 
     });
+
+    describe('parse method', () => {
+
+        it('should return example.com for example.com', () => {
+            let test = new DomainAdapter();
+            test.parse('example.com');
+
+            expect(test.domain).to.equal('example.com');
+
+        });
+    });
 });
