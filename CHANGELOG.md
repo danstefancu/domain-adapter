@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/danstefancu/domain-adapter/compare/1.1.3...1.2.0) (2022-11-07)
+
+
+### Features
+
+* add new parse method to allow usage as a service ([84d242b](https://github.com/danstefancu/domain-adapter/commit/84d242b11cb68d5187e05b6050f7dfa0fc16f853))
+
 ### [1.1.3](https://github.com/danstefancu/domain-adapter/compare/1.1.2...1.1.3) (2021-08-31)
 
 
