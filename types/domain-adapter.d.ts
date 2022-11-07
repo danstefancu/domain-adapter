@@ -5,6 +5,7 @@ export default class DomainAdapter {
     private _path;
     private inputDomain;
     constructor(domainOrUrl?: string);
+    parse(domainOrUrl?: string): this;
     private generateDomainSubdomain;
     private stripWWW;
     private assureUrl;

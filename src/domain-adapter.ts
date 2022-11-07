@@ -23,6 +23,8 @@ export default class DomainAdapter {
         this.punyCode();
         this.generateDomainSubdomain();
         this.generatePath();
+
+        return this;
     }
 
     private generateDomainSubdomain() {
